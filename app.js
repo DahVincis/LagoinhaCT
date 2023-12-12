@@ -47,13 +47,10 @@ app.use((req, res) => {
   res.status(404).send('Error 404: Not Found');
 });
 
-// Use the PORT environment variable, defaulting to 80
-const port = process.env.PORT || 80;
-
-// Start the server on the specified port
-app.listen(port, (err) => {
+// Start the server on port 80
+app.listen(80, (err) => {
   if (err) {
     return console.error(err);
   }
-  console.log(`Server started on port ${port}`);
+  console.log('Server started on port 80');
 });
